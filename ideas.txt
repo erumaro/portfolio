@@ -1,0 +1,9 @@
+Header: Logo (Eruma) in the center.
+Main:
+    Section 1: Hero. Short introduction. And contact button/link.
+    Section 2: About me section. What type of dev are you?
+    Section 3: Skills. What are your main skills and some stuff you know. Anything you learn or want to learn?
+    Section 4: The Work and Education journey through classic portfolio stuff?
+    Section 5: Contact. Here you could give some info on for example preferred contact routes, work env, salary stuff etc.
+        Also create a nice contact card: Image, Name, Profession and current position.
+Footer: Socials, app links (github repo), phone number.
