@@ -2,21 +2,37 @@ import React from "react";
 import 'normalize.css';
 import './App.css';
 import logo from './logo.png';
+import hero from './hero.jpg';
+import portrait from './tobias.jpg';
 
 class App extends React.Component {
     render() {
         return(
             <div className="page">
                 <header className="app-header">
-                    <a className="app-logo" href="https://www.eruma.se"><img className="logo" src={logo} alt="Eruma logo" /></a>
+                    <a className="app-logo" href="https://www.eruma.se"><img className="logo" src={logo} alt="Eruma" /></a>
                 </header>
                 <main className="app-main content">
-                    <h1 className="sr-only">Tobias Årud portfolio</h1>
-                    <section id="sectionIntro" className="section section-intro">
-                        <h2>This is for hero and short intro.</h2>
+                    <section id="sectionIntro" className="section section-intro" style={{ backgroundImage: `url(${hero})` }}>
+                        <div>
+                            <h2>Hi, I'm Tobias!</h2>
+                            <p>
+                                I build Wordpress and Front-end websites with a strong foundation in semantic code and accessibility.
+                            </p>
+                        </div>
                     </section>
                     <section id="sectionAbout" className="section section-about">
-                        <h2>This is for longer text about me.</h2>
+                        <div>
+                            <h2>Code Jedi by day, hobbyist artist by night</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim sodales augue, et dapibus est faucibus ut. 
+                                Nam fermentum ut ante vitae tristique. Etiam malesuada libero euismod vehicula egestas. Nullam euismod faucibus est a vehicula. 
+                                Mauris in augue ut metus laoreet pretium vitae et leo.
+                            </p>
+                        </div>
+                        <div>
+                            <img className="portrait" src={portrait} alt="Tobias" />
+                        </div>
                     </section>
                     <section id="sectionSkills" className="section section-skills">
                         <h2>This is for listing skills and tools.</h2>
