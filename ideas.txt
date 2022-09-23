@@ -7,3 +7,7 @@ Main:
     Section 5: Contact. Here you could give some info on for example preferred contact routes, work env, salary stuff etc.
         Also create a nice contact card: Image, Name, Profession and current position.
 Footer: Socials, app links (github repo), phone number.
+
+Design:
+    Colors: Preferably AAA, but AA is fine.
+    Buttons: s
