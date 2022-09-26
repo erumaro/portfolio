@@ -1,9 +1,12 @@
 import React from "react";
 import 'normalize.css';
 import './App.css';
-import logo from './logo.png';
-import hero from './hero.jpg';
-import portrait from './tobias.jpg';
+import logo from '../public/images/logo.png';
+import hero from '../public/images/hero.jpg';
+import portraitoriginal from '../public/images/tobias.jpg';
+import portraitsmall from '../public/images/tobias375.jpg';
+import portraitmedium from '../public/images/tobias768.jpg';
+import portraitlarge from '../public/images/tobias1080.jpg';
 
 class App extends React.Component {
     render() {
@@ -31,7 +34,11 @@ class App extends React.Component {
                             </p>
                         </div>
                         <div>
-                            <img className="portrait" src={portrait} alt="Tobias" />
+                            <img className="portrait" 
+                                src={portraitsmall} 
+                                srcSet={`${portraitsmall} 375w, ${portraitmedium} 768w, ${portraitlarge} 1080w, ${portraitoriginal} 1980w`} 
+                                sizes="(max-width: 400px) 100vw, (max-width: 700px) 50vw, (max-width: 900px) 33vw, 225px"
+                                alt="Tobias" />
                         </div>
                     </section>
                     <section id="sectionSkills" className="section section-skills">
