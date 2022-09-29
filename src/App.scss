@@ -105,26 +105,26 @@ Color names from https://www.colorhexa.com/ */
     width: 100%;
     height: 95vh;
     font-size: 1.5em;
-}
 
-.section-intro div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 95vh;
-    background-size: cover;
-    background-color: rgba(119,20,20,.4);
-    padding: 0 var(--vertical-gap);
-}
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 95vh;
+        background-size: cover;
+        background-color: rgba(119,20,20,.4);
+        padding: 0 var(--vertical-gap);
+    }
 
-.section-intro h2 {
-    text-shadow: 4px 4px 16px var(--dark-text-color);
-}
+    h2 {
+        text-shadow: 4px 4px 16px var(--dark-text-color);
+    }
 
-.section-intro p {
-    text-shadow: 3px 3px 14px var(--dark-text-color);
+    p {
+        text-shadow: 3px 3px 14px var(--dark-text-color);
+    }
 }
 
 .section-about {
@@ -132,20 +132,18 @@ Color names from https://www.colorhexa.com/ */
     width: 100%;
     max-width: var(--max-width);
     flex-direction: column;
-}
 
-@media only screen and (min-width: 768px) {
-    .section-about {
+    @media screen and (min-width: 768px) {
         flex-direction: row;
     }
-}
 
-.portrait {
-    vertical-align: middle;
-    object-fit: cover;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+    .portrait {
+        vertical-align: middle;
+        object-fit: cover;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
 }
 
 .section-skills {
@@ -159,28 +157,28 @@ Color names from https://www.colorhexa.com/ */
     background-color: var(--light-bg-color);
     box-shadow: 0 4px 8px 0 var(--dark-bg-color);
     border-radius: 4px;
-}
 
-.skill-card h3 {
-    border-bottom: 2px solid red;
-    padding: var(--padding-h-v);
-    margin: 0;
-}
+    h3 {
+        border-bottom: 2px solid red;
+        padding: var(--padding-h-v);
+        margin: 0;
+    }
 
-.skill-card ul {
-    list-style: none;
-    margin: 0;
-    padding: var(--padding-h-v);
-}
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: var(--padding-h-v);
 
-.skill-card ul li {
-    background-color: var(--falured);
-    color: var(--light-text-color);
-    padding: 2px;
-    margin: 2px;
-    border-radius: 4px;
-}
+        li{
+            background-color: var(--falured);
+            color: var(--light-text-color);
+            padding: 2px;
+            margin: 2px;
+            border-radius: 4px;
 
-.skill-card ul li ul {
-    padding: 0;
+            ul {
+                padding: 0;
+            }
+        }
+    }
 }

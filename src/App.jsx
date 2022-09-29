@@ -1,6 +1,6 @@
 import React from "react";
 import 'normalize.css';
-import './App.css';
+import './App.scss';
 import logo from '../public/images/logo.png';
 import herooriginal from '../public/images/hero.jpg';
 import herosmall from '../public/images/hero375.jpg';
