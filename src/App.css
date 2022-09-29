@@ -64,7 +64,7 @@ Color names from https://www.colorhexa.com/ */
     top: 5px;
     width: auto;
     z-index: 100000;
-    outline: 3px $focus solid;
+    outline: 3px var(--dark-bg-color) solid;
 }
 
 .app-header {
