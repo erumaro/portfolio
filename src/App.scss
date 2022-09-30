@@ -5,9 +5,11 @@ Color names from https://www.colorhexa.com/ */
     /* Colors */
     --charcoal: #36454F;
     --verylightgrey: #f9f9f9;
+    --verydarkgrey: #212121;
     --falured: #801818;
     --vividorange: #E2A21C;
     --vividblue: #0DA2F2;
+    --darkblue: #0A007A;
 
     --light-bg-color: var(--verylightgrey);
     --dark-text-color: var(--charcoal);
@@ -31,11 +33,16 @@ Color names from https://www.colorhexa.com/ */
     background-size: cover;
 }
 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 .container {
     width: 100%;
     max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
+    padding: .5em;
 }
 
 .flex {
@@ -45,9 +52,11 @@ Color names from https://www.colorhexa.com/ */
     align-items: center;
 }
 
-.columns {
+.grid {
+    display: grid;
+    gap: var(--horizontal-gap);
 
-    .column {}
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .app-header {
@@ -77,7 +86,7 @@ Color names from https://www.colorhexa.com/ */
             padding: 1em;
             color: var(--dark-text-color);
             display: block;
-            font-size: 80%;
+            font-size: 75%;
 
             @media screen and (min-width: 768px) {
                 font-size: 100%;
@@ -124,14 +133,46 @@ Color names from https://www.colorhexa.com/ */
 }
 
 .app-about {
-    div {
+    .column {
+        display: flex;
         flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+
+        h2 {
+            font-size: 160%;
+        }
+
+        .portrait {
+            vertical-align: middle;
+            object-fit: cover;
+            width: 100%;
+            height: 250px;
+            border: .3em solid var(--light-bg-color);
+        }
+
+        p {
+            margin: .5em 0;
+            font-size: 120%;
+            background-color: var(--light-bg-color);
+            border-top-left-radius: 2em;
+            padding: 1em;
+        }
+
+        p:nth-child(even) {
+            border-top-left-radius: 0;
+            border-bottom-right-radius: 2em;
+        }
     }
 }
 
-.text-bubble{
-    width: 40vw;
-    padding: 1em;
-    background-color: var(--light-bg-color);
-    border-radius: 5em;
+.app-footer {
+    p {
+        color: var(--verydarkgrey);
+        text-align: center;
+    }
+
+    a {
+        color: var(--darkblue);
+    }
 }
