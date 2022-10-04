@@ -33,6 +33,13 @@ Color names from https://www.colorhexa.com/ */
     background-size: cover;
 }
 
+@mixin flex($wrap, $justifyContent, $alignItems) {
+    display: flex;
+    flex-wrap: $wrap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
@@ -46,10 +53,7 @@ Color names from https://www.colorhexa.com/ */
 }
 
 .flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    @include flex(wrap, center, center);
 }
 
 .grid {
@@ -60,13 +64,13 @@ Color names from https://www.colorhexa.com/ */
 }
 
 .app-header {
-    padding: var(--vertical-gap) var(--horizontal-gap);
     background-color: var(--light-bg-color);
 
     .app-branding {
         @media screen and (min-width: 768px) {
             margin-right: auto;
         }
+        padding: .5em;
         
         .logo {
             filter: invert(100%);
@@ -75,15 +79,14 @@ Color names from https://www.colorhexa.com/ */
     }
 
     nav ul {
-        display: flex;
-        flex-wrap: wrap;
+        @include flex(wrap, center, center);
         padding: 0;
         margin: 0;
         list-style: none;
 
         a {
             text-decoration: none;
-            padding: 1em;
+            padding: .5em;
             color: var(--dark-text-color);
             display: block;
             font-size: 75%;
@@ -112,16 +115,25 @@ Color names from https://www.colorhexa.com/ */
     background-size: cover;
     color: var(--light-text-color);
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     font-size: 1.5em;
 
-    div {
+    h1 {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-items: flex-end;
+
+        .tobiastext {
+            height: 60px;
+            filter: invert(100%);
+            padding: 5px;
+        }
+    }
+
+    div {
+        @include flex(wrap, center, center);
         flex-direction: column;
         width: 100%;
-        height: 95vh;
+        height: 100vh;
         background-size: cover;
         background-color: rgba(#0DA2F2, .8);
         padding: 0 var(--vertical-gap);
@@ -133,37 +145,37 @@ Color names from https://www.colorhexa.com/ */
 }
 
 .app-about {
-    .column {
-        display: flex;
-        flex-direction: column;
-        justify-content: stretch;
-        align-items: stretch;
+    background-color: #EDEAE5;
 
-        h2 {
-            font-size: 160%;
-        }
+    h2 {
+        font-size: 300%;
+        text-transform: uppercase;
+    }
 
-        .portrait {
-            vertical-align: middle;
-            object-fit: cover;
-            width: 100%;
-            height: 250px;
-            border: .3em solid var(--light-bg-color);
-        }
+    p {
+        font-size: 120%;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 110%;
 
-        p {
+        li {
             margin: .5em 0;
-            font-size: 120%;
-            background-color: var(--light-bg-color);
-            border-top-left-radius: 2em;
-            padding: 1em;
-        }
-
-        p:nth-child(even) {
-            border-top-left-radius: 0;
-            border-bottom-right-radius: 2em;
         }
     }
+
+    .portrait {
+        width: 100%;
+        height: auto
+    }
+
+}
+
+.app-skills {
+    
 }
 
 .app-footer {
