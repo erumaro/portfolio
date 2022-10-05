@@ -1,8 +1,8 @@
 import React from "react";
 import 'normalize.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlasses, faDisplay, faTimeline, faAddressCard, faPencil, faBookJournalWhills, faHeadphones } from '@fortawesome/free-solid-svg-icons'
-import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { faGlasses, faDisplay, faTimeline, faAddressCard, faPencil, faBookJournalWhills, faHeadphones, faDatabase, faCode, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import { faGithubAlt, faReact, faWordpress, faJs, faHtml5, faCss3, faSass, faPhp, faNodeJs, faBootstrap, faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 import './App.scss';
 import logo from '../public/images/logo.png';
 import herolarge from '../public/images/hero1080.jpg';
@@ -74,43 +74,48 @@ class App extends React.Component {
                             </div>
                         </div>
                     </section>
-                    <section id="sectionSkills">
+                    <section id="sectionSkills" className="app-skills">
                         <div className="container">
                             <h2>Fullstack skills with Front-end focus</h2>
                             <p>As a developer I like exploring new languages, design patterns and tools to become even better at what I know.</p>
-                            <div className="skills">
-                                <div>
+                            <div className="skills-wrapper">                      
+                                <div className="filter" role="group" aria-label="Buttons that filter the list">
+                                    <button id="allskills" className="filter-button active-filter-button">
+                                        All skills
+                                    </button>
+                                    <button id="design" className="filter-button">
+                                        Design
+                                    </button>
+                                    <button id="fullstack" className="filter-button">
+                                        Full stack
+                                    </button>
                                     <button id="frontend" className="filter-button">
                                         Front-end
                                     </button>
                                     <button id="backend" className="filter-button">
                                         Back-end
                                     </button>
-                                    <button id="fullstack" className="filter-button">
-                                        Full stack
-                                    </button>
-                                    <button id="design" className="filter-button">
-                                        Design
-                                    </button>
                                 </div>
-                                <ul>
-                                    <li>HTML5</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>React (JS Library)</li>
-                                    <li>jQuery (JS Library)</li>
-                                    <li>SCSS</li>
-                                    <li>Composer</li>
-                                    <li>Node.js</li>
-                                    <li>Wordpress</li>
-                                    <li>MySQL</li>
-                                    <li>PHP</li>
+                                <ul className="skills" aria-live="polite">
+                                    <li className="frontend fullstack"><FontAwesomeIcon icon={faHtml5} /> HTML5</li>
+                                    <li className="frontend fullstack"><FontAwesomeIcon icon={faCss3} /> CSS</li>
+                                    <li className="frontend fullstack"><FontAwesomeIcon icon={faJs} /> JavaScript</li>
+                                    <li className="frontend"><FontAwesomeIcon icon={faReact} /> React</li>
+                                    <li className="frontend"><FontAwesomeIcon icon={faCode} /> jQuery</li>
+                                    <li className="frontend"><FontAwesomeIcon icon={faSass} /> SCSS</li>
+                                    <li className="fullstack backend"><FontAwesomeIcon icon={faCode} /> Composer</li>
+                                    <li className="frontend backend fullstack"><FontAwesomeIcon icon={faNodeJs} /> Node.js</li>
+                                    <li className="frontend fullstack backend"><FontAwesomeIcon icon={faWordpress} /> Wordpress</li>
+                                    <li className="fullstack backend"><FontAwesomeIcon icon={faDatabase} /> MySQL</li>
+                                    <li className="fullstack backend"><FontAwesomeIcon icon={faPhp} /> PHP</li>
+                                    <li className="design frontend"><FontAwesomeIcon icon={faAccessibleIcon} /> Accessibility</li>
+                                    <li className="design frontend"><FontAwesomeIcon icon={faLaptopCode} /> Responsive design</li>
                                 </ul>
                                 <p>For more info on each skill or tool checkout my Wordpress site at <a href="https://eruma.se">Eruma.se</a></p>
                             </div>
                         </div>
                     </section>
-                    <section id="sectionXp">
+                    <section id="sectionXp" className="app-xp">
                         <div className="container">
                             <h2>I gained my experience at several great places</h2>
                             <p>Every place I have been at have been helping grow as developer and colleague and I hope you will be my next step!</p>

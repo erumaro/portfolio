@@ -10,7 +10,11 @@ Color names from https://www.colorhexa.com/ */
     --vividorange: #E2A21C;
     --vividblue: #0DA2F2;
     --darkblue: #0A007A;
-
+    --saturateddarkyellow: #A1A25D;
+    --verydarkred: #170D0D;
+    --greyishred: #C29393;
+    --saturateddarkred: #965555;
+    /* Color uses */
     --light-bg-color: var(--verylightgrey);
     --dark-text-color: var(--charcoal);
     --dark-bg-color: var(--charcoal);
@@ -29,8 +33,8 @@ Color names from https://www.colorhexa.com/ */
     font-family: var(--sans-serif);
     font-size: 16px;
     color: var(--dark-text-color);
-    background: linear-gradient(180deg, var(--vividblue) 0%, var(--vividorange) 100%);
-    background-size: cover;
+    /* background: linear-gradient(180deg, var(--vividblue) 0%, var(--vividorange) 100%);
+    background-size: cover; */
 }
 
 @mixin flex($wrap, $justifyContent, $alignItems) {
@@ -42,6 +46,10 @@ Color names from https://www.colorhexa.com/ */
 
 *, ::after, ::before {
     box-sizing: border-box;
+}
+
+h2 {
+    font-size: 180%;
 }
 
 .container {
@@ -175,10 +183,67 @@ Color names from https://www.colorhexa.com/ */
 }
 
 .app-skills {
-    
+    background-color: var(--saturateddarkyellow);
+    padding: 3em 0;
+
+    .filter {
+        border-bottom: .2em solid var(--verydarkred);
+    }
+
+    .filter-button {
+        background-color: var(--verydarkred);
+        color: var(--light-text-color);
+        padding: .5em 1em;
+        margin: .5em;
+        margin-bottom: 0;
+        border: 1px solid var(--verydarkred);
+        border-top-left-radius: .2em;
+        border-top-right-radius: .2em;
+        
+        &:hover {
+            background-color: var(--greyishred);
+            color: var(--verydarkred);
+        }
+    }
+
+    .active-filter-button {
+        background-color: var(--saturateddarkred);
+        color: var(--light-text-color);
+    }
+
+    .skills {
+        background-color: var(--light-bg-color);
+        list-style: none;
+        display: flex;
+        padding: .5em;
+        margin: 0;
+        flex-wrap: wrap;
+        border-bottom-right-radius: 1em;
+
+        li {
+            padding: .5em;
+            margin: .5em;
+            background-color: var(--dark-bg-color);
+            color: var(--light-text-color);
+            font-size: 120%;
+
+            svg {
+                display: block;
+                height: 24px;
+                margin: 0 auto;
+                margin-bottom: .2em;
+            }
+        }
+    }
+}
+
+.app-xp {
+    background-color: var(--vividorange);
 }
 
 .app-footer {
+    background-color: var(--vividorange);
+
     p {
         color: var(--verydarkgrey);
         text-align: center;
