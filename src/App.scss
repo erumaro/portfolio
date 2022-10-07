@@ -44,6 +44,10 @@ Color names from https://www.colorhexa.com/ */
     align-items: $alignItems;
 }
 
+@mixin padding($vertical, $horizontal) {
+    padding: $vertical $horizontal;
+}
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
@@ -66,7 +70,7 @@ h2 {
 
 .grid {
     display: grid;
-    gap: var(--horizontal-gap);
+    gap: 2em;
 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
@@ -213,6 +217,7 @@ h2 {
 
     .skills {
         background-color: var(--light-bg-color);
+        box-shadow: 1px 10px 15px -2px rgba(48,30,5,0.47);
         list-style: none;
         display: flex;
         padding: .5em;
@@ -239,6 +244,73 @@ h2 {
 
 .app-xp {
     background-color: var(--vividorange);
+
+    .xp-card {
+        background-color: var(--light-bg-color);
+        box-shadow: 1px 10px 15px -2px rgba(48,30,5,0.47);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: stretch;
+        border: 1px solid var(--light-bg-color);
+        border-radius: .2em;
+    }
+
+    .card-title {
+        @include padding(1em, 1em);
+
+        font-size: 140%;
+        margin: 0;
+        color: var(--verydarkgrey);
+        border-bottom: .5em solid var(--dark-bg-color);
+    }
+
+    .card-content {
+        p {
+            @include padding(.5em, 1em);
+            margin: 0;
+            background-color: #ebebeba2;
+        }
+
+        ul {
+            @include padding(.5em, 2em);
+            list-style: square;
+            margin: 0;
+        }
+
+        .card-tags {
+            ul {
+                list-style-type: none;
+                @include padding(.5em, 1em);
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    @include padding(.5em, .5em);
+                    background-color: var(--falured);
+                    color: var(--light-text-color);
+                    margin: .3em;
+                }
+            }
+        }
+    }
+    .card-mild {
+        .card-title { border-color: #00BFA5; }
+        .card-tags ul li { 
+            background-color: #00BFA5; 
+            color: var(--verydarkgrey);
+        }
+    }
+
+    .card-wcag {
+        .card-title { border-color: #00354D; }
+        .card-tags ul li { background-color: #00354D; }
+    }
+
+    .card-nackademin {
+        .card-title { border-color: #4A5B6C; }
+        .card-tags ul li { background-color: #4A5B6C; }
+    }
 }
 
 .app-footer {

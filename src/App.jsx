@@ -121,33 +121,61 @@ class App extends React.Component {
                             <p>Every place I have been at have been helping grow as developer and colleague and I hope you will be my next step!</p>
                             <div className="grid">
                                 <div className="column">
-                                    <div className="xp-card">
-                                        <h3>Company/School</h3>
-                                        <ul>
-                                            <li>Made coffee</li>
-                                            <li>Commuted</li>
-                                            <li>Slept well/badly</li>
-                                        </ul>
+                                    <div className="xp-card card-mild">
+                                        <h3 className="card-title">Mild</h3>
+                                        <div className="card-content">
+                                            <p>2021-2022 Front-end developer</p>
+                                            <ul>
+                                                <li>Developing</li>
+                                                <li>Optimizing</li>
+                                            </ul>
+                                            <div className="card-tags">
+                                                <ul>
+                                                    <li>Wordpress</li>
+                                                    <li>Front-end</li>
+                                                    <li>Docker</li>
+                                                    <li>Lando</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="column">
-                                    <div className="xp-card">
-                                        <h3>Company/School</h3>
-                                        <ul>
-                                            <li>Made coffee</li>
-                                            <li>Commuted</li>
-                                            <li>Slept well/badly</li>
-                                        </ul>
+                                    <div className="xp-card card-wcag">
+                                        <h3 className="card-title">WCAG Networks</h3>
+                                        <div className="card-content">
+                                            <p>2020-2021 Front-end developer</p>
+                                            <ul>
+                                                <li>Developing</li>
+                                                <li>Analyzing</li>
+                                            </ul>
+                                            <div className="card-tags">
+                                                <ul>
+                                                    <li>Wordpress</li>
+                                                    <li>Front-end</li>
+                                                    <li>WCAG</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="column">
-                                    <div className="xp-card">
-                                        <h3>Company/School</h3>
-                                        <ul>
-                                            <li>Made coffee</li>
-                                            <li>Commuted</li>
-                                            <li>Slept well/badly</li>
-                                        </ul>
+                                    <div className="xp-card card-nackademin">
+                                        <h3 className="card-title">Nackademin</h3>
+                                        <div className="card-content">
+                                            <p>2015-2017 Vocational degree, Front-end</p>
+                                            <ul>
+                                                <li>Front-end</li>
+                                                <li>Project methodology</li>
+                                                <li>Wordpress</li>
+                                            </ul>
+                                            <div className="card-tags">
+                                                <ul>
+                                                    <li>Wordpress</li>
+                                                    <li>Front-end</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
